@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php wp_title('|', true, 'right') ?></title>
-    <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>">
-    <?php wp_head(); ?>
-  </head>
-  <body>
+<?php get_header(); ?>
     <h1><?php bloginfo('name'); ?></h1>
     <h2><?php bloginfo('description'); ?></h2>
     <?php if(have_posts()): while(have_posts()): the_post(); ?>
@@ -29,6 +21,4 @@
      <?php else: ?>
        <p>No posts found. :*</p>
      <?php endif; ?>
-     <?php wp_footer(); ?>
-  </body>
-</html>
+<?php get_footer(); ?>
