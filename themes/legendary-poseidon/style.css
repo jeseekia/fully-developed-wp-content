@@ -4,3 +4,7 @@ Theme Name: Legendary Poseidon
 body {
   background: #e67fb9;
 }
+
+.project-preview {
+  width: 900px;
+}
