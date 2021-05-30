@@ -7,4 +7,11 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <?php wp_body_open(); ?>
+    <?php
+      wp_body_open();
+      wp_nav_menu(
+          array(
+            'theme_location' => 'primary'
+          )
+      );
+    ?>
