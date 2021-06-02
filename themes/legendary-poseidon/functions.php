@@ -56,4 +56,21 @@ function legendaryposeidon_setup() {
 endif; // legendaryposeidon_setup
 add_action( 'after_setup_theme', 'legendaryposeidon_setup' );
 
+add_action( 'widgets_init', 'legendaryposeidon_register_sidebars' );
+function legendaryposeidon_register_sidebars() {
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'primary',
+            'name'          => __( 'Primary Sidebar' ),
+            'description'   => __( 'They told me I did not need this.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+}
+
 ?>
